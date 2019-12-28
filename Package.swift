@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "fluent-kit",
     platforms: [
-       .macOS(.v10_14)
+       .macOS(.v10_14),
+       .iOS(.v11)
     ],
     products: [
         .library(name: "FluentKit", targets: ["FluentKit"]),
@@ -14,7 +15,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
         .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
-        .package(url: "https://github.com/adtrevor/sql-kit.git", from: "fixios"),
+        .package(url: "https://github.com/adtrevor/sql-kit.git", .branch("fixios")),
     ],
     targets: [
         .target(name: "FluentKit", dependencies: ["NIO", "Logging"]),
