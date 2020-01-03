@@ -176,3 +176,9 @@ extension Siblings: AnyEagerLoadable {
         }
     }
 }
+
+extension Siblings: DependencySpecifier {
+    public var dependencies: [String] {
+        return [To.schema]
+    }
+}

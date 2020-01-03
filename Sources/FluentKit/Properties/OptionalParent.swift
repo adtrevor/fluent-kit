@@ -63,3 +63,9 @@ extension OptionalParent: AnyProperty {
 }
 
 extension OptionalParent: AnyField { }
+
+extension OptionalParent: DependencySpecifier {
+    public var dependencies: [String] {
+        return [To.schema]
+    }
+}

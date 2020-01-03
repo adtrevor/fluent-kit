@@ -153,3 +153,7 @@ enum _ModelCodingKey: CodingKey {
         self = .int(intValue)
     }
 }
+
+public protocol DependencySpecifier {
+    var dependencies: [String] { get }
+}

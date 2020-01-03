@@ -165,3 +165,9 @@ extension Children: AnyEagerLoadable {
         }
     }
 }
+
+extension Children: DependencySpecifier {
+    public var dependencies: [String] {
+        return [To.schema]
+    }
+}

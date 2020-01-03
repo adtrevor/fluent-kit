@@ -67,3 +67,9 @@ extension Parent: AnyProperty {
 }
 
 extension Parent: AnyField { }
+
+extension Parent: DependencySpecifier {
+    public var dependencies: [String] {
+        return [To.schema]
+    }
+}
